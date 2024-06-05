@@ -1,0 +1,79 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Platformer.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "#Platformer": {
+            "scaleInDock": 1
+        },
+        "#tilemap_packed": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Jason/Desktop/Git CMPM 120/PlatformImprovement/assets/platformer-level-1.tmx": {
+            "scale": 1.0787777777777778,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 210.88680605623648,
+                "y": 294.7780409928932
+            }
+        },
+        "C:/Users/Jason/Desktop/Git CMPM 120/PlatformImprovement/assets/platformer-level-1.tmx#kenny_tilemap_packed": {
+            "scaleInDock": 1
+        },
+        "Platformer.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 939.3333333333333,
+                "y": 323.33333333333326
+            }
+        },
+        "Platformer.tmx#Platformer": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "Platformer.tmx#backgrounds": {
+            "scaleInDock": 1.5
+        },
+        "Platformer.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/Jason/Desktop/Git CMPM 120/Starter Platformer (Game)/StarterPlatformer/assets",
+    "last.imagePath": "C:/Users/Jason/Desktop/Git CMPM 120/Starter Platformer (Game)/StarterPlatformer/assets",
+    "lastUsedTilesetExportFilter": "All Files (*)",
+    "map.height": 20,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 20,
+    "map.tileWidth": 20,
+    "map.width": 100,
+    "openFiles": [
+        "Platformer.tmx"
+    ],
+    "project": "Platformer.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "Platformer.tmx",
+        "C:/Users/Jason/Desktop/Git CMPM 120/PlatformImprovement/assets/platformer-level-1.tmx",
+        "Platformer.tsx"
+    ],
+    "resizeMap.removeObjects": true,
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.spacing": 0,
+    "tileset.tileSize": {
+        "height": 21,
+        "width": 21
+    }
+}
