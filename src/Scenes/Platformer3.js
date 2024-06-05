@@ -31,6 +31,8 @@ class Platformer3 extends Phaser.Scene{
         this.BackgroundLayer = this.map.createLayer("Background", this.tilesetBackground, 0,0);
         this.BackgroundLayer.setScale(2);
 
+        this.Background2Layer = this.map.createLayer("Background2", this.tileset, 0,0);
+        this.Background2Layer.setScale(2);
 
         // set up player avatar
         my.sprite.player = this.physics.add.sprite(0, game.config.height/1.3, "platformer_characters", "tile_0000.png").setScale(SCALE)
@@ -84,6 +86,9 @@ class Platformer3 extends Phaser.Scene{
                     this.lifeText = this.add.text(180, 50, life.toString(), { fontFamily: 'Arial', fontSize: 35, color: '#000000' });
                     this.lifeText.setScrollFactor(0);
                     this.lifeText.visible = true;
+                    if (life % 0.5 == 0){
+                        life += 0.5;
+                    } 
                     this.sound.play("dead", { volume: 0.2});
                     if (life <= 0) {
                         this.sound.play("dead", { volume: 2 });
@@ -159,7 +164,8 @@ class Platformer3 extends Phaser.Scene{
         }
 
         //Dialogue
-        this.spriteText = this.add.text(my.sprite.player.x, my.sprite.player.y, "The snow is slowing me down!", { fontFamily: 'Arial', fontSize: 25, color: '#000000' });
+        this.spriteText = this.add.text(my.sprite.player.x, my.sprite.player.y+ 100, "The snow is slowing me down!", { fontFamily: 'Arial', fontSize: 25, color: '#000000' });
+        this.spriteText2 = this.add.text(my.sprite.player.x, my.sprite.player.y +150, "(You can now double jump and wall climb.)", { fontFamily: 'Arial', fontSize: 25, color: '#000000' });
 
         // Score
         this.scoreTitle = this.add.text(0, 0, "Score:", { fontFamily: 'Arial', fontSize: 35, color: '#000000' });
@@ -305,7 +311,7 @@ class Platformer3 extends Phaser.Scene{
 
         my.vfx.walking.stop();
 
-        document.getElementById('description').innerHTML = '<h2>Platformer2.js</h2><br> Use arrow keys to move. Up arrow to jump. // Press D to clear debug. // Talk to NPCs by colliding with them.';
+        document.getElementById('description').innerHTML = '<h2>Platformer3.js</h2><br> Use arrow keys to move. Up arrow to jump. // Press D to clear debug.';
         
     }
 

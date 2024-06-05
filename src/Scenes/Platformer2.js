@@ -79,6 +79,11 @@ class Platformer2 extends Phaser.Scene{
             this.lifeText.setScrollFactor(0);
             this.lifeText.visible = true;
             this.sound.play("dead", { volume: 0.2});
+
+            if (life % 0.5 == 0){
+                life += 0.5;
+            } 
+
             if (life <= 0) {
                 this.sound.play("dead", { volume: 2 });
                 this.scene.start("GameOver");
@@ -101,6 +106,13 @@ class Platformer2 extends Phaser.Scene{
         function flagCollideEnd(player, flag) { 
             this.scene.start("Platformer3");
         }
+
+
+        // Torches
+        this.TorchLayer = this.map.createLayer("Torches", this.tileset, 0,0);
+        this.TorchLayer.setScale(2);
+
+    
 
         // Score
         this.scoreTitle = this.add.text(0, 0, "Score:", { fontFamily: 'Arial', fontSize: 35, color: '#000000' });
@@ -418,8 +430,8 @@ class Platformer2 extends Phaser.Scene{
         });
 
         my.vfx.jump.stop();
-
         TKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+
         document.getElementById('description').innerHTML = '<h2>Platformer2.js</h2><br> Use arrow keys to move. Up arrow to jump. // Press D to clear debug. // Talk to NPCs by colliding with them.';
         
     }
@@ -475,9 +487,11 @@ class Platformer2 extends Phaser.Scene{
             this.sound.play("jump", { volume: 0.5});
         }
 
-        if(Phaser.Input.Keyboard.JustDown(TKey)) {
+        
+        if (Phaser.Input.Keyboard.JustDown(TKey)){ 
+            let my = this.my;
             this.scene.start("Platformer3");
+            
         }
-
     }
 }

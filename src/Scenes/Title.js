@@ -29,6 +29,7 @@ class Title extends Phaser.Scene {
             this.scene.start("Platformer1");
             
         }
+
     }
 }
 

@@ -267,9 +267,10 @@ class Platformer extends Phaser.Scene {
 
         this.space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
-        // Debugging Key to next scene
-        TKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
         document.getElementById('description').innerHTML = '<h2>Platformer.js</h2><br> Use arrow keys to move. Up arrow to jump. // Press D to clear debug.';
+
+        TKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+
     }
 
 
@@ -329,9 +330,11 @@ class Platformer extends Phaser.Scene {
             this.sound.play("jump", { volume: 0.5});
         }
 
-        if(Phaser.Input.Keyboard.JustDown(TKey)) {
-            this.scene.start("Platformer2");
-        }
 
+        if (Phaser.Input.Keyboard.JustDown(TKey)){ 
+            let my = this.my;
+            this.scene.start("Platformer2");
+            
+        }
     }
 }
