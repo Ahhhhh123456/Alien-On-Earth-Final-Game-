@@ -884,35 +884,6 @@
  <tileset firstgid="901" name="backgrounds" tilewidth="21" tileheight="21" tilecount="99" columns="11">
   <image source="backgrounds.png" width="231" height="189"/>
  </tileset>
- <objectgroup draworder="index" id="10" name="Collectibles" visible="0">
-  <object id="75" name="coins" gid="380" x="544.667" y="588.333" width="21" height="21"/>
-  <object id="76" name="coins" gid="380" x="567.667" y="587.333" width="21" height="21"/>
-  <object id="78" name="coins" gid="380" x="748.667" y="461.667" width="21" height="21"/>
-  <object id="79" name="coins" gid="380" x="779.333" y="462.333" width="21" height="21"/>
-  <object id="80" name="coins" gid="380" x="962.667" y="335.667" width="21" height="21"/>
-  <object id="81" name="coins" gid="380" x="992" y="336.333" width="21" height="21"/>
-  <object id="82" name="coins" gid="380" x="1569.33" y="251.667" width="21" height="21"/>
-  <object id="83" name="coins" gid="380" x="1612" y="251.667" width="21" height="21"/>
-  <object id="84" name="coins" gid="380" x="1910" y="251" width="21" height="21"/>
-  <object id="85" name="coins" gid="380" x="1950" y="251" width="21" height="21"/>
-  <object id="86" name="coins" gid="380" x="1586.67" y="624.333" width="21" height="21"/>
-  <object id="87" name="coins" gid="380" x="1498.67" y="545" width="21" height="21"/>
-  <object id="88" name="coins" gid="380" x="1416.67" y="463" width="21" height="21"/>
-  <object id="89" name="coins" gid="380" x="1330" y="381" width="21" height="21"/>
-  <object id="90" name="coins" gid="380" x="1231.33" y="293.667" width="21" height="21"/>
-  <object id="91" name="coins" gid="380" x="1209.33" y="293" width="21" height="21"/>
-  <object id="92" name="coins" gid="380" x="1186.67" y="293" width="21" height="21"/>
-  <object id="93" name="coins" gid="380" x="1931" y="709" width="21" height="21"/>
-  <object id="94" name="coins" gid="380" x="1954.33" y="708.333" width="21" height="21"/>
-  <object id="95" name="coins" gid="380" x="2146" y="708.333" width="21" height="21"/>
-  <object id="96" name="coins" gid="380" x="2170" y="708.333" width="21" height="21"/>
-  <object id="97" name="coins" gid="380" x="2198" y="251" width="21" height="21"/>
-  <object id="98" name="coins" gid="380" x="2267.33" y="252.333" width="21" height="21"/>
-  <object id="99" name="coins" gid="380" x="2335.33" y="249.667" width="21" height="21"/>
-  <object id="100" name="coins" gid="380" x="2411.33" y="251.667" width="21" height="21"/>
-  <object id="101" name="coins" gid="380" x="1696" y="707" width="21" height="21"/>
-  <object id="107" name="key" gid="15" x="2488" y="251" width="21" height="21"/>
- </objectgroup>
  <layer id="8" name="Background" width="60" height="20">
   <data encoding="csv">
 903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,903,
@@ -937,6 +908,35 @@
 928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928,928
 </data>
  </layer>
+ <objectgroup draworder="index" id="10" name="Collectibles">
+  <object id="75" name="coins" gid="380" x="259.334" y="293.666" width="21" height="21"/>
+  <object id="76" name="coins" gid="380" x="283.667" y="293.333" width="21" height="21"/>
+  <object id="78" name="coins" gid="380" x="364.667" y="231" width="21" height="21"/>
+  <object id="79" name="coins" gid="380" x="388.666" y="230.333" width="21" height="21"/>
+  <object id="80" name="coins" gid="380" x="468" y="168.334" width="21" height="21"/>
+  <object id="81" name="coins" gid="380" x="492.667" y="168.333" width="21" height="21"/>
+  <object id="82" name="coins" gid="380" x="778.33" y="126.667" width="21" height="21"/>
+  <object id="83" name="coins" gid="380" x="798" y="126.667" width="21" height="21"/>
+  <object id="84" name="coins" gid="380" x="945" y="126" width="21" height="21"/>
+  <object id="85" name="coins" gid="380" x="967" y="125.667" width="21" height="21"/>
+  <object id="86" name="coins" gid="380" x="788.67" y="315.666" width="21" height="21"/>
+  <object id="87" name="coins" gid="380" x="746.003" y="273" width="21" height="21"/>
+  <object id="88" name="coins" gid="380" x="704.003" y="231.667" width="21" height="21"/>
+  <object id="89" name="coins" gid="380" x="661.333" y="188.333" width="21" height="21"/>
+  <object id="90" name="coins" gid="380" x="619.33" y="147" width="21" height="21"/>
+  <object id="91" name="coins" gid="380" x="572.663" y="145.667" width="21" height="21"/>
+  <object id="92" name="coins" gid="380" x="595.337" y="145.667" width="21" height="21"/>
+  <object id="93" name="coins" gid="380" x="956.333" y="357.667" width="21" height="21"/>
+  <object id="94" name="coins" gid="380" x="978.997" y="357.666" width="21" height="21"/>
+  <object id="95" name="coins" gid="380" x="1058.67" y="357" width="21" height="21"/>
+  <object id="96" name="coins" gid="380" x="1080.67" y="356.333" width="21" height="21"/>
+  <object id="97" name="coins" gid="380" x="1132" y="125.667" width="21" height="21"/>
+  <object id="98" name="coins" gid="380" x="1094.66" y="126.333" width="21" height="21"/>
+  <object id="99" name="coins" gid="380" x="1170.66" y="126.334" width="21" height="21"/>
+  <object id="100" name="coins" gid="380" x="1205.33" y="126.334" width="21" height="21"/>
+  <object id="101" name="coins" gid="380" x="860" y="357.667" width="21" height="21"/>
+  <object id="107" name="key" gid="15" x="1238.67" y="125.667" width="21" height="21"/>
+ </objectgroup>
  <layer id="7" name="Flag" width="60" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

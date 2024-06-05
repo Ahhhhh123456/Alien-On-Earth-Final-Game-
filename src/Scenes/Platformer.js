@@ -144,19 +144,22 @@ class Platformer extends Phaser.Scene {
             frame: 379
         });
 
-            // Since createFromObjects returns an array of regular Sprites, we need to convert 
-            // them into Arcade Physics sprites (STATIC_BODY, so they don't move) 
-        this.physics.world.enable(this.coins, Phaser.Physics.Arcade.STATIC_BODY);
-
-
+        
             // Create a Phaser group out of the array this.coins
             // This will be used for collision detection below.
         this.keyGroup = this.add.group(this.coins);
 
         this.coins.forEach(key => {
-            key.setScale(1.5); 
+            key.x *= 2;
+
+            key.y *= 2;
+            
+            key.setScale(2);
         });
 
+        this.physics.world.enable(this.coins, Phaser.Physics.Arcade.STATIC_BODY);
+
+        
             // Handle collision detection with coins
         this.physics.add.overlap(my.sprite.player, this.keyGroup, (obj1, obj2) => {
             obj2.destroy();     // remove coin on overlap
@@ -180,23 +183,20 @@ class Platformer extends Phaser.Scene {
             key: "tilemap_sheet",
             frame: 14
         });
-        
-
-            // Since createFromObjects returns an array of regular Sprites, we need to convert 
-            // them into Arcade Physics sprites (STATIC_BODY, so they don't move) 
-        this.physics.world.enable(this.key, Phaser.Physics.Arcade.STATIC_BODY);
-
-
+    
             // Create a Phaser group out of the array this.coins
             // This will be used for collision detection below.
         this.keyGroup = this.add.group(this.key);
 
         this.key.forEach(key => {
-            key.setScale(2); 
+            key.x *= 2;
+
+            key.y *= 2;
+            
+            key.setScale(2);
         });
 
-
-        
+        this.physics.world.enable(this.key, Phaser.Physics.Arcade.STATIC_BODY);
 
             // Handle collision detection with keys
         this.physics.add.overlap(my.sprite.player, this.keyGroup, (obj1, obj2) => {
@@ -242,15 +242,6 @@ class Platformer extends Phaser.Scene {
         // set up Phaser-provided cursor key input
         cursors = this.input.keyboard.createCursorKeys();
 
-        
-
-        // debug key listener (assigned to D key)
-        this.input.keyboard.on('keydown-D', () => {
-            this.physics.world.drawDebug = this.physics.world.drawDebug ? false : true
-            this.physics.world.debugGraphic.clear()
-        }, this);
-
-
         // Camera
 
         const scaledWidth = this.map.widthInPixels * this.SCALE;
@@ -265,12 +256,10 @@ class Platformer extends Phaser.Scene {
         this.cameras.main.setDeadzone(50, 50);
         this.cameras.main.setZoom(1);
 
-        this.space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
-
-        document.getElementById('description').innerHTML = '<h2>Platformer.js</h2><br> Use arrow keys to move. Up arrow to jump. // Press D to clear debug.';
+        document.getElementById('description').innerHTML = '<h2>Platformer.js</h2><br> Use <b> ARROW KEYS </b> to move. <br> <br>  <b> UP ARROW </b> to jump.';
 
         TKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
-
+       
     }
 
 

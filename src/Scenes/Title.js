@@ -24,6 +24,7 @@ class Title extends Phaser.Scene {
     }
 
     update() {
+
         if (Phaser.Input.Keyboard.JustDown(TKey)){ 
             let my = this.my;
             this.scene.start("Platformer1");

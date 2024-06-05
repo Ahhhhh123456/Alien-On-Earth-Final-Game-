@@ -311,7 +311,7 @@ class Platformer3 extends Phaser.Scene{
 
         my.vfx.walking.stop();
 
-        document.getElementById('description').innerHTML = '<h2>Platformer3.js</h2><br> Use arrow keys to move. Up arrow to jump. // Press D to clear debug.';
+        document.getElementById('description').innerHTML = '<h2>Platformer.js</h2><br> Use <b> ARROW KEYS </b> to move. //// <b> COLLIDE </b> with NPC to talk <br> <br>  <b> UP ARROW </b> to jump. (<b>UP ARROW </b> again to double jump) ////  <b>UP ARROW + RIGHT/LEFT ARROW </b> to wall climb';
         
     }
 
@@ -415,6 +415,7 @@ class Platformer3 extends Phaser.Scene{
             }
         }
         if (my.sprite.player.body.blocked.down) {
+            this.wallClimb = true;
             this.doubleJump = true;
             this.JumpCount = 0;
         }
@@ -444,7 +445,7 @@ class Platformer3 extends Phaser.Scene{
             my.vfx.jump.start();
             
         }
-     
+        
 
     }
 }
