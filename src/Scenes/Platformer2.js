@@ -432,7 +432,7 @@ class Platformer2 extends Phaser.Scene{
         my.vfx.jump.stop();
 
         document.getElementById('description').innerHTML = '<h2>Platformer.js</h2><br> Use <b> ARROW KEYS </b> to move. //// <b> COLLIDE </b> with NPC to talk <br> <br>  <b> UP ARROW </b> to jump.';
-        TKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+
 
     }
 
@@ -487,11 +487,5 @@ class Platformer2 extends Phaser.Scene{
             this.sound.play("jump", { volume: 0.5});
         }
 
-
-        if (Phaser.Input.Keyboard.JustDown(TKey)){ 
-            let my = this.my;
-            this.scene.start("Platformer3");
-            
-        }
     }
 }

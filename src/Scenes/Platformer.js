@@ -159,7 +159,7 @@ class Platformer extends Phaser.Scene {
 
         this.physics.world.enable(this.coins, Phaser.Physics.Arcade.STATIC_BODY);
 
-        
+
             // Handle collision detection with coins
         this.physics.add.overlap(my.sprite.player, this.keyGroup, (obj1, obj2) => {
             obj2.destroy();     // remove coin on overlap
@@ -258,7 +258,7 @@ class Platformer extends Phaser.Scene {
 
         document.getElementById('description').innerHTML = '<h2>Platformer.js</h2><br> Use <b> ARROW KEYS </b> to move. <br> <br>  <b> UP ARROW </b> to jump.';
 
-        TKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T);
+       
        
     }
 
@@ -319,11 +319,5 @@ class Platformer extends Phaser.Scene {
             this.sound.play("jump", { volume: 0.5});
         }
 
-
-        if (Phaser.Input.Keyboard.JustDown(TKey)){ 
-            let my = this.my;
-            this.scene.start("Platformer2");
-            
-        }
     }
 }
