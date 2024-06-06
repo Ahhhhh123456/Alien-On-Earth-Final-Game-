@@ -80,10 +80,6 @@ class Platformer2 extends Phaser.Scene{
             this.lifeText.visible = true;
             this.sound.play("dead", { volume: 0.2});
 
-            if (life % 0.5 == 0){
-                life += 0.5;
-            } 
-
             if (life <= 0) {
                 this.sound.play("dead", { volume: 2 });
                 this.scene.start("GameOver");
