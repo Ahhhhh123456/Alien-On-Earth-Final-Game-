@@ -86,9 +86,6 @@ class Platformer3 extends Phaser.Scene{
                     this.lifeText = this.add.text(180, 50, life.toString(), { fontFamily: 'Arial', fontSize: 35, color: '#000000' });
                     this.lifeText.setScrollFactor(0);
                     this.lifeText.visible = true;
-                    if (life % 0.5 == 0){
-                        life += 0.5;
-                    } 
                     this.sound.play("dead", { volume: 0.2});
                     if (life <= 0) {
                         this.sound.play("dead", { volume: 2 });
